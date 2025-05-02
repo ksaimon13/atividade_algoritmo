@@ -1,0 +1,9 @@
+﻿  exibir_mensagem.c
+E:\backup pc moshagelemes\Kaique\ADS\ALGORITMOS\atividade_alg\exibir_mensagem.c(59,25): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
+E:\backup pc moshagelemes\Kaique\ADS\ALGORITMOS\atividade_alg\exibir_mensagem.c(153,3): warning C4098: 'operacaoSimples': função 'void' retornando um valor
+E:\backup pc moshagelemes\Kaique\ADS\ALGORITMOS\atividade_alg\exibir_mensagem.c(166,21): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
+E:\backup pc moshagelemes\Kaique\ADS\ALGORITMOS\atividade_alg\exibir_mensagem.c(166,27): warning C4244: 'função': conversão de 'float' para 'int', possível perda de dados
+E:\backup pc moshagelemes\Kaique\ADS\ALGORITMOS\atividade_alg\exibir_mensagem.c(168,3): warning C4098: 'operacaoSimples': função 'void' retornando um valor
+E:\backup pc moshagelemes\Kaique\ADS\ALGORITMOS\atividade_alg\exibir_mensagem.c(184,3): warning C4098: 'operacaoComplexa': função 'void' retornando um valor
+E:\backup pc moshagelemes\Kaique\ADS\ALGORITMOS\atividade_alg\exibir_mensagem.c(203,3): warning C4098: 'menu': função 'void' retornando um valor
+  atividade_alg.vcxproj -> E:\backup pc moshagelemes\Kaique\ADS\ALGORITMOS\atividade_alg\x64\Debug\atividade_alg.exe
