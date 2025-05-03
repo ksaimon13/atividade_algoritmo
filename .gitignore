@@ -43,3 +43,4 @@ Thumbs.db
 
 # Arquivos do Visual Studio Code (caso use)
 .vscode/
+.vs/
