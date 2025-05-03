@@ -1,0 +1,45 @@
+# Compilação C/C++
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+
+# Arquivos de build do Visual Studio
+*.vcxproj.user
+*.vcxproj.filters
+*.suo
+*.sdf
+*.opensdf
+*.cache
+*.log
+*.tlog
+*.idb
+*.ipch
+*.dbmdl
+
+# Diretórios comuns de build
+Debug/
+Release/
+x64/
+x86/
+ipch/
+[Bb]uild*/
+[Bb]in/
+[Oo]bj/
+
+# Arquivos temporários
+*.tmp
+*.log
+*.user
+*.bak
+*.ncb
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos do Visual Studio Code (caso use)
+.vscode/
