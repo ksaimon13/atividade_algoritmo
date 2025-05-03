@@ -1,19 +1,22 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <locale.h>
 
 #pragma region Funcoes Atividade 1.1
 
 void exibir_mensagem() {
+	printf("Atividade 1.1\n\n");
 	printf("Aprendendo procedimentos em C!\n\n");
+	printf("-----------------------------------------------\n\n");
 }
 
 #pragma endregion
 
 #pragma region Funcoes Atividade 1.2
 
-void saudacao(const char* nome) {
-	printf("Seja bem-vindo(a) %s\n\n", nome);
+void saudacao(const char* nome) {	
+	printf("Seja bem-vindo(a) %s\n\n", nome);	
 }
 
 #pragma endregion
@@ -24,21 +27,21 @@ void soma(float num1, float num2) {
 
 	float resultado = num1 + num2;
 
-	printf("O resultado da soma e %f", resultado);
+	printf("\nO resultado da soma é %f", resultado);
 }
 
 void subtracao(float num1, float num2) {
 
 	float resultado = num1 - num2;
 
-	printf("\nO resultado da subtracao e %f", resultado);
+	printf("\nO resultado da subtração é %f", resultado);
 }
 
 void multiplicacao(float num1, float num2) {
 
 	float resultado = num1 * num2;
 
-	printf("\nO resultado da multiplicacao e %f", resultado);
+	printf("\nO resultado da multiplicação é %f", resultado);
 }
 
 void divisao(float num1, float num2) {
@@ -46,10 +49,10 @@ void divisao(float num1, float num2) {
 	if (num2 != 0) {
 		float resultado = num1 / num2;
 
-		printf("\nO resultado da Divisao: %.2f\n", resultado);
+		printf("\nO resultado da Divisão: %.2f\n", resultado);
 	}
 	else {
-		printf("\nErro: divisao por zero!");
+		printf("\nErro: divisão por zero!");
 	}
 }
 
@@ -59,7 +62,8 @@ void divisao(float num1, float num2) {
 
 void calcular_quadrado(float numero) {
 	int resultado = numero * numero;
-	printf("\nO quadrado do numero digitado e: %d\n", resultado);
+	printf("\nO quadrado do número digitado é: %d\n", resultado);
+	printf("-----------------------------------------------\n\n");
 }
 
 #pragma endregion
@@ -77,6 +81,7 @@ void verificar_paridade(int num) {
 	else {
 		printf("0\n");
 	};
+	printf("-----------------------------------------------\n\n");
 }
 #pragma endregion
 
@@ -93,11 +98,10 @@ void calcular_fatorial(int num) {
 	for (int i = num; i > 0; i--)
 	{
 		result = result * i;
-
 	};
 
-	printf("\nO fatorial do numero digitado eh: %d\n", result);
-
+	printf("\nO fatorial do número digitado é: %d\n", result);
+	printf("-----------------------------------------------\n\n");
 }
 #pragma endregion
 
@@ -122,8 +126,9 @@ void verificar_primo(int num) {
 	}
 	else {
 		printf("\n0\n");
-
 	};
+
+	printf("-----------------------------------------------\n\n");
 
 }
 
@@ -140,7 +145,8 @@ void calcular_potencia(int base, int expoente) {
 		resultado = resultado * base;
 	};
 
-	printf("\nO resultado eh: %d\n", resultado);
+	printf("\nO resultado é: %d\n", resultado);
+	printf("-----------------------------------------------\n\n");
 }
 
 #pragma endregion
@@ -148,56 +154,60 @@ void calcular_potencia(int base, int expoente) {
 #pragma region Funcoes Atividade 4.1
 void operacaoSimples(int operacao_digitada) {
 	float num1, num2;
-	printf("\nDigite dois numeros: ");
+	printf("\n\nDigite dois números: ");
 
 	if (scanf_s("%f %f", &num1, &num2) != 2) {
-		printf("Erro ao ler os numeros.\n\n");
+		printf("Erro ao ler os números.\n\n");
 		return 1;
 	}
 
 	switch (operacao_digitada) {
 	case 1:
 		soma(num1, num2);
+		break;
 	case 2:
 		subtracao(num1, num2);
+		break;
 	case 3:
 		multiplicacao(num1, num2);
+		break;
 	case 4:
 		divisao(num1, num2);
+		break;
 	case 5:
 		calcular_potencia(num1, num2);
-	default:
-		return 0;
+		break;
 	}
 }
 
 void operacaoComplexa(int operacao_digitada) {
 	int num1;
 
-	printf("\nDigite um numero inteiro nao negativo: ");
+	printf("\nDigite um número inteiro não negativo: ");
 	scanf_s("%d", &num1);
 
 	switch (operacao_digitada) {
 	case 6:
 		calcular_fatorial(num1);
+		break;
 	case 7:
 		verificar_primo(num1);
-	default:
-		return 0;
+		break;
 	}
 }
 
 void menu() {
 	int operacao_digitada;
 
-	printf("\nDigite uma opcao;\n");
+	printf("\nDigite uma opção;\n");
 	printf("\n Para soma, digite 1; ");
-	printf("\n Para subtracao, digite 2; ");
-	printf("\n Para multiplicacao, digite 3; ");
-	printf("\n Para divisao, digite 4; ");
-	printf("\n Para Potencia��o, digite 5; ");
+	printf("\n Para subtração, digite 2; ");
+	printf("\n Para multiplicação, digite 3; ");
+	printf("\n Para divisão, digite 4; ");
+	printf("\n Para Potenciação, digite 5; ");
 	printf("\n Para Fatorial, digite 6; ");
-	printf("\n Para Verificacao de numero primo digite 7 \n\n; ");
+	printf("\n Para Verificação de número primo digite 7; ");
+	printf("\n Digite 0 para sair \n\n; ");
 
 	scanf_s("%d", &operacao_digitada);
 
@@ -228,7 +238,7 @@ int fibonacci(int n) {
 }
 
 void exibir_fibonacci(int n) {
-	printf("Sequ�ncia de Fibonacci com %d termos:\n", n);
+	printf("Sequência de Fibonacci com %d termos:\n", n);
 	for (int i = 0; i < n; i++) {
 		printf("%d ", fibonacci(i));
 	}
@@ -237,20 +247,18 @@ void exibir_fibonacci(int n) {
 
 int getFibonacci() {
 	int n;
-	printf("Digite um n�mero inteiro positivo: ");
+	printf("Atividade 4.2 (Sequencia de Fobonacci)\n\n");
+	printf("Digite um número inteiro positivo: ");
 	scanf_s("%d", &n);
 
 	exibir_fibonacci(n);
-
-	printf("O %d� termo da sequ�ncia de Fibonacci �: %d\n", n, fibonacci(n - 1));
-
-	return 0;
+	printf("-----------------------------------------------\n\n");
 }
 #pragma endregion
 
 #pragma region DESAFIO
 
-// Fun��o para calcular a m�dia aritm�tica
+// Função para calcular a média aritmética
 float calcularMedia(float numeros[], int n) {
 	float soma = 0.0;
 	for (int i = 0; i < n; i++) {
@@ -259,7 +267,7 @@ float calcularMedia(float numeros[], int n) {
 	return soma / n;
 }
 
-// Fun��o para ordenar os n�meros (necess�ria para calcular a mediana)
+// Função para ordenar os números (necessária para calcular a mediana)
 void ordenar(float numeros[], int n) {
 	for (int i = 0; i < n - 1; i++) {
 		for (int j = 0; j < n - i - 1; j++) {
@@ -272,7 +280,7 @@ void ordenar(float numeros[], int n) {
 	}
 }
 
-// Fun��o para calcular a mediana
+// Função para calcular a mediana
 float calcularMediana(float numeros[], int n) {
 	ordenar(numeros, n);
 	if (n % 2 == 0) {
@@ -283,7 +291,7 @@ float calcularMediana(float numeros[], int n) {
 	}
 }
 
-// Fun��o para encontrar o maior valor
+// Função para encontrar o maior valor
 float encontrarMaior(float numeros[], int n) {
 	float maior = numeros[0];
 	for (int i = 1; i < n; i++) {
@@ -294,7 +302,7 @@ float encontrarMaior(float numeros[], int n) {
 	return maior;
 }
 
-// Fun��o para encontrar o menor valor
+// Função para encontrar o menor valor
 float encontrarMenor(float numeros[], int n) {
 	float menor = numeros[0];
 	for (int i = 1; i < n; i++) {
@@ -305,7 +313,7 @@ float encontrarMenor(float numeros[], int n) {
 	return menor;
 }
 
-// Fun��o para calcular o desvio padr�o
+// Função para calcular o desvio padrão
 float calcularDesvioPadrao(float numeros[], int n) {
 	float media = calcularMedia(numeros, n);
 	float soma = 0.0;
@@ -319,6 +327,7 @@ float calcularDesvioPadrao(float numeros[], int n) {
 
 
 int main() {
+	setlocale(LC_ALL, "");
 
 #pragma region Chamando Atividade 1.1	
 
@@ -327,17 +336,19 @@ int main() {
 #pragma endregion
 
 #pragma region Chamando Atividade 1.2	
-
+	printf("Atividade 1.2\n\n");
 	saudacao("Kaique");
 	saudacao("Leticia");
 	saudacao("Professor");
+	printf("-----------------------------------------------\n\n");
 
 #pragma endregion
 
 #pragma region Chamando Atividade 1.3	
 
 	float num1, num2;
-	printf("\nDigite dois numeros: ");
+	printf("Atividade 1.3 (Operações matemáticas simples)\n\n");	
+	printf("\nDigite dois números: ");
 
 	if (scanf_s("%f %f", &num1, &num2) != 2) {
 		printf("Erro ao ler os numeros.\n\n");
@@ -348,13 +359,15 @@ int main() {
 	subtracao(num1, num2);
 	multiplicacao(num1, num2);
 	divisao(num1, num2);
+	printf("-----------------------------------------------\n\n");
 
 #pragma endregion
 
 #pragma region Chamando Atividade 2.1
 
 	int numero;
-	printf("\nDigite um numero: ");
+	printf("Atividade 2.1 (Retorna o quadrado do número digitado)\n\n");
+	printf("\nDigite um número: ");
 	scanf_s("%d", &numero);
 	calcular_quadrado(numero);
 
@@ -362,8 +375,8 @@ int main() {
 
 #pragma region Chamando Atividade 2.2
 	int numpar;
-
-	printf("\nDigite um numero inteiro: ");
+	printf("Atividade 2.2 (Retorna se um número é par (1) ou impar(0))\n\n");
+	printf("\nDigite um número inteiro: ");
 
 	scanf_s("%d", &numpar);
 
@@ -378,8 +391,8 @@ int main() {
 #pragma region Chamando Atividade 3.1
 
 	int numfatorial;
-
-	printf("\nDigite um numero inteiro nao negativo: ");
+	printf("Atividade 3.1 (Calcula o fatorial do número digitado)\n\n");
+	printf("\nDigite um número inteiro não negativo: ");
 
 	scanf_s("%d", &numfatorial);
 
@@ -390,8 +403,8 @@ int main() {
 #pragma region Chamando Atividade 3.2
 
 	int numprimo;
-
-	printf("\nDigite um numero inteiro: ");
+	printf("Atividade 3.2 (Verifica se o número é primo, primo(1) não primo(0))\n\n");
+	printf("\nDigite um número inteiro: ");
 
 	scanf_s("%d", &numprimo);
 
@@ -403,24 +416,24 @@ int main() {
 
 	int num_base;
 	int num_exp;
-
-	printf("\nDigite um numero base: ");
+	printf("Atividade 3.3 (Calcula a potência)\n\n");
+	printf("\nDigite um número base: ");
 
 	scanf_s("%d", &num_base);
 
-	printf("\nDigite um numero expoente: ");
+	printf("\nDigite um número expoente: ");
 
 	scanf_s("%d", &num_exp);
 
 	calcular_potencia(num_base, num_exp);
 
-	return 0;
-
 #pragma endregion
 
 #pragma region Chamando Atividade 4.1
 
+	printf("Atividade 4.1 (Calculadora científica)\n\n");
 	menu();
+	printf("-----------------------------------------------\n\n");
 
 #pragma endregion
 
@@ -435,35 +448,37 @@ int main() {
 #define MAX_NUMEROS 100
 
 	int n;
-	printf("Quantos n�meros voc� deseja inserir? ");
+	printf("Atividade DESAFIO\n\n");
+	printf("Quantos números você deseja inserir? ");
 	scanf_s("%d", &n);
 
-	if (n <= 0) {
-		printf("N�mero inv�lido de elementos.\n");
+	if (n <= 0 || n > MAX_NUMEROS) {
+		printf("Número inválido de elementos.\n");
 		return 1;
 	}
 
 	float* numeros = (float*)malloc(n * sizeof(float));
 	if (numeros == NULL) {
-		printf("Erro de aloca��o de mem�ria.\n");
+		printf("Erro de alocação de memória.\n");
 		return 1;
 	}
 
-	printf("Digite os n�meros:\n");
+	printf("Digite os números:\n");
 	for (int i = 0; i < n; i++) {
-		printf("N�mero %d: ", i + 1);
+		printf("Número %d: ", i + 1);
 		scanf_s("%f", &numeros[i]);
 	}
 
 	// Calculando e exibindo os resultados
 	printf("\n--- Resultados ---\n");
-	printf("M�dia Aritm�tica: %.2f\n", calcularMedia(numeros, n));
+	printf("Média Aritmética: %.2f\n", calcularMedia(numeros, n));
 	printf("Mediana: %.2f\n", calcularMediana(numeros, n));
 	printf("Maior Valor: %.2f\n", encontrarMaior(numeros, n));
 	printf("Menor Valor: %.2f\n", encontrarMenor(numeros, n));
-	printf("Desvio Padr�o: %.2f\n", calcularDesvioPadrao(numeros, n));
+	printf("Desvio Padrão: %.2f\n", calcularDesvioPadrao(numeros, n));
+	printf("\n\n-----------------------------------------------\n\n");
 
-	free(numeros); // Liberar a mem�ria alocada
+	free(numeros); // Liberar a memória alocada
 	return 0;
 
 #pragma endregion

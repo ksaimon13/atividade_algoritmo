@@ -16,13 +16,13 @@
     <Filter Include="Arquivos de Origem\atividades">
       <UniqueIdentifier>{08ac3d8f-a96b-48c5-a4fb-7fca3f44efd4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Arquivos de Origem\atividades\Atividade_1_1">
+    <Filter Include="Arquivos de Origem\atividades\AtividadesAlgoritmo">
       <UniqueIdentifier>{10345f6c-4361-4ba9-ad6f-fc6cd43f60c4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="exibir_mensagem.c">
-      <Filter>Arquivos de Origem\atividades\Atividade_1_1</Filter>
+    <ClCompile Include="AtividadesAlgoritmo.c">
+      <Filter>Arquivos de Origem\atividades\AtividadesAlgoritmo</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
